@@ -7,3 +7,4 @@ TestFirst JavaScript is a multi-part series that provides practice to intermedia
   - recreate-array-methods
   - use-array-methods
 - 08: classes
+
