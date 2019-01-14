@@ -2,8 +2,8 @@
 
 TestFirst JavaScript is a multi-part series that provides practice to intermediate to advanced javascript concepts. The majority of concepts introduced in TestFirst have mini lessons and practice exercises in the workshops on learndot. However, there will be new concepts introduced in TestFirst that you will need to learn on your own by reading documentation (it's important to begin learning how to read documentation efficiently!)
 
-- 06: Functional
+- 06: functions-and-closure
+- 07: functional-programming
   - recreate-array-methods
   - use-array-methods
-- 07: Recursion
-- 08: Classes
+- 08: classes
