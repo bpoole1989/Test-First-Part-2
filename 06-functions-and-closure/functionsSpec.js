@@ -12,7 +12,7 @@
   Read the documentation linked above and apply your learnings to the problem
 */
 
-xdescribe('concatString: Using the arguments "array-like object"', () => {
+describe('concatString: Using the arguments "array-like object"', () => {
   beforeEach(() => {
     spyOn(Array, 'from').and.callThrough(); // What is Array.from? is it mentioned or used in any of the examples from the documentation linked? https://goo.gl/w9KrQK
   });
@@ -42,7 +42,7 @@ xdescribe('concatString: Using the arguments "array-like object"', () => {
   This will explore the idea that JS' functions are just values that can be passed aroudn.
   For example, here we can have a function that creates another function.
 */
-xdescribe('yourFunctionRunner - higher-order functions', () => {
+describe('yourFunctionRunner - higher-order functions', () => {
   const callThisFunction = () => {
     return 'Called Value';
   };
@@ -75,7 +75,7 @@ xdescribe('yourFunctionRunner - higher-order functions', () => {
   Then, even if the scope that the function was defined in goes away, it continues to have access
   to have scope.
   */
-xdescribe('makeAdder', () => {
+describe('makeAdder', () => {
   it('returns a function', () => {
     const returnValue = makeAdder(5);
 
@@ -98,7 +98,7 @@ xdescribe('makeAdder', () => {
 // remember information that in a scope that will eventually go away.
 //
 
-xdescribe('once', () => {
+describe('once', () => {
   it('accepts a function argument and returns a new function', () => {
     const sayHello = () => {
       return 'Hello!';
@@ -213,7 +213,7 @@ describe("Don't Spill The Beans", () => {
     // checks for values in the array Object.keys returns, these are the property names on "secret" object.
     expect(
       properties.indexOf('getSecret') >= 0 &&
-        properties.indexOf('setSecret') >= 0
+      properties.indexOf('setSecret') >= 0
     ).toEqual(true);
     expect(properties.length === 2).toEqual(true);
   });
