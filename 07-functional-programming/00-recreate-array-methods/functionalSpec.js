@@ -277,7 +277,7 @@ describe('the function some', () => {
 
   it('should not use the Array.prototype.reduce method', () => {
     some([0, 10, 28], isEven);
-    expect(Array.prototype.reduce.calls.some()).toBe(false);
+    expect(Array.prototype.reduce.calls.any()).toBe(false);
     // use the reduce method you created in these exercises instead
   });
 });
