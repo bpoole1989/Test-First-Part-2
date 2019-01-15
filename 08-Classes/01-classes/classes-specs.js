@@ -58,7 +58,7 @@ describe('Cat class', () => {
     expect(cat.name).toBe('Garfield');
   });
 
-  it('should have a color a color property', () => {
+  it('should have a color property', () => {
     expect(cat.color).toBe('yellow');
   });
 
