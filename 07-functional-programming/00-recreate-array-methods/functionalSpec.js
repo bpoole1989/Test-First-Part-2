@@ -134,7 +134,7 @@ describe('the function filter', () => {
 // the includes determines whether an array includes a certain element, returning true or false as appropriate
 describe('the function includes', () => {
   beforeEach(() => {
-    // You can't use the built in Array.prototype.reduce!
+    // You can't use the built in `Array.prototype.includes`
     spyOn(Array.prototype, 'includes').and.callThrough();
   });
 
@@ -163,7 +163,7 @@ describe('the function includes', () => {
 });
 
 // countWords is a pure function
-describe("the function countWords is a utility functions we'll need soon", () => {
+describe("the function countWords is a utility function we'll need soon", () => {
   it('the first argument is the starting value of the total count', () => {
     expect(countWords(0, 'count the words')).toBe(3);
     expect(countWords(10, 'two words')).toBe(12);
@@ -186,7 +186,7 @@ describe('the function reduce', () => {
 
   it('sums up the array', () => {
     let add = (a, b) => a + b;
-    // reduce is accepts an array, starting value, and combining function
+    // reduce accepts an array, starting value, and combining function
     expect(reduce([3, 5, 7], 0, add)).toBe(15);
   });
 
