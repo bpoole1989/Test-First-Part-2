@@ -39,7 +39,8 @@ describe('concatString: Using the arguments "array-like object"', () => {
 });
 
 /* 
-  This will explore the idea that JS' functions are just values that can be passed aroudn.
+  This will explore the idea that JS' functions are just values that can be passed around 
+  as an argument or returned as a value from another function.
   For example, here we can have a function that creates another function.
 */
 describe('yourFunctionRunner - higher-order functions', () => {
@@ -95,7 +96,7 @@ describe('makeAdder', () => {
 
 // Functions that decorate other functions.  These functions return a version of the function
 // with some changed behavior.  This will depend on closure since the function needs to
-// remember information that in a scope that will eventually go away.
+// remember information in a scope that will eventually go away.
 //
 
 describe('once', () => {
@@ -174,7 +175,7 @@ describe('shared contexts', () => {
     expect(Object.keys(sharedObj).length).toBe(4);
   });
 
-  it('should allow `oneIncrementer`, `tensIncrementer`, and `getValue` methods call the same value', () => {
+  it('should allow `oneIncrementer`, `tensIncrementer`, and `getValue` methods to call the same value', () => {
     sharedObj.oneIncrementer();
     sharedObj.tensIncrementer();
     expect(sharedObj.getValue()).toBe(11);
