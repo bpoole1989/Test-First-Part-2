@@ -49,7 +49,7 @@ describe('the function map', () => {
 
   // Where is doubler defined? This is something you may need to create...
   it('create a function that takes an element and returns double of it', () => {
-    expect(doubler(15)).toEqual(30);
+    expect(doubler(15)).toBe(30);
   });
 
   /* 
@@ -85,7 +85,7 @@ describe('the function map', () => {
 
   it('should not use Array.prototype.map', () => {
     map([1, 2, 3], doubler);
-    expect(Array.prototype.map.calls.any()).toEqual(false);
+    expect(Array.prototype.map.calls.any()).toBe(false);
   });
 });
 
@@ -127,7 +127,7 @@ describe('the function filter', () => {
 
   it('should not use Array.prototype.filter', () => {
     filter([1, 2, 3, 4, 5, 6, 7, 8], oddFilter);
-    expect(Array.prototype.filter.calls.any()).toEqual(false);
+    expect(Array.prototype.filter.calls.any()).toBe(false);
   });
 });
 
@@ -139,7 +139,7 @@ describe('the function includes', () => {
   });
 
   it('should return true if a collection includes a user-specified value', () => {
-    expect(includes([1, 2, 3], 2)).toEqual(true);
+    expect(includes([1, 2, 3], 2)).toBe(true);
     expect(
       includes(
         {
@@ -149,29 +149,29 @@ describe('the function includes', () => {
         },
         3
       )
-    ).toEqual(true);
+    ).toBe(true);
   });
 
   it('should return false if a collection does not contain a user-specified value', () => {
-    expect(includes([1, 3, 9], 2)).toEqual(false);
+    expect(includes([1, 3, 9], 2)).toBe(false);
   });
 
   it('does not call Array.prototype.reduce', () => {
     includes(['windows', 'mac', 'ubuntu'], 'ubuntu');
-    expect(Array.prototype.includes.calls.any()).toEqual(false);
+    expect(Array.prototype.includes.calls.any()).toBe(false);
   });
 });
 
 // countWords is a pure function
 describe("the function countWords is a utility functions we'll need soon", () => {
   it('the first argument is the starting value of the total count', () => {
-    expect(countWords(0, 'count the words')).toEqual(3);
-    expect(countWords(10, 'two words')).toEqual(12);
+    expect(countWords(0, 'count the words')).toBe(3);
+    expect(countWords(10, 'two words')).toBe(12);
   });
   it('counts words in a sentence separated by empty space', () => {
-    expect(countWords(0, 'this is a sentence with 7 words')).toEqual(7);
-    expect(countWords(5, 'this is a sentence with 7 words')).toEqual(12);
-    expect(countWords(6, 'count the words')).toEqual(9);
+    expect(countWords(0, 'this is a sentence with 7 words')).toBe(7);
+    expect(countWords(5, 'this is a sentence with 7 words')).toBe(12);
+    expect(countWords(6, 'count the words')).toBe(9);
   });
 });
 
@@ -187,24 +187,24 @@ describe('the function reduce', () => {
   it('sums up the array', () => {
     let add = (a, b) => a + b;
     // reduce is accepts an array, starting value, and combining function
-    expect(reduce([3, 5, 7], 0, add)).toEqual(15);
+    expect(reduce([3, 5, 7], 0, add)).toBe(15);
   });
 
   it('counts the number of words in an array of strings', () => {
     wordArray = ['hello there this is line 1', 'and this is line 2'];
-    expect(reduce(wordArray, 0, countWords)).toEqual(11);
+    expect(reduce(wordArray, 0, countWords)).toBe(11);
   });
 
   it('should not use Array.prototype.reduce', () => {
     reduce(wordArray, 0, countWords);
-    expect(Array.prototype.reduce.calls.any()).toEqual(false);
+    expect(Array.prototype.reduce.calls.any()).toBe(false);
   });
 });
 
 // Use reduce inside a sum function that takes an array of integers
 describe('the sum function', () => {
   it('uses reduce to add up the numbers in an array', () => {
-    expect(sum([1, 2, 3])).toEqual(6);
+    expect(sum([1, 2, 3])).toBe(6);
   });
 });
 
@@ -232,27 +232,27 @@ describe('the function every', () => {
 
   it('should handle an empty set', () => {
     // This gives a hint of the starting value for reduce...
-    expect(every([], getValue)).toEqual(true);
+    expect(every([], getValue)).toBe(true);
   });
 
   it('should handle a set that contains even numbers', () => {
-    expect(every([0, 10, 28], isEven)).toEqual(true);
+    expect(every([0, 10, 28], isEven)).toBe(true);
   });
 
   it('should handle a set that contains an odd number', () => {
-    expect(every([0, 11, 28], isEven)).toEqual(false);
+    expect(every([0, 11, 28], isEven)).toBe(false);
   });
 
   it('should not use Array.prototype.every or Array.prototype.reduce', () => {
     every([1, 2, 3], isEven);
-    expect(Array.prototype.every.calls.any()).toEqual(false);
-    expect(Array.prototype.reduce.calls.any()).toEqual(false);
+    expect(Array.prototype.every.calls.any()).toBe(false);
+    expect(Array.prototype.reduce.calls.any()).toBe(false);
     // use the reduce method you created in these exercises instead
   });
 });
 
-describe('the function any', () => {
-  // if ONE value passes the condition, any returns true
+describe('the function some', () => {
+  // if ONE value passes the condition, some returns true
   // this is similar to the every function, but only one value needs to meet the
   // condition of the callback function.
   beforeEach(() => {
@@ -264,20 +264,20 @@ describe('the function any', () => {
   };
 
   it('should handle the empty set', () => {
-    expect(any([])).toEqual(false);
+    expect(some([])).toBe(false);
   });
 
   it('should handle a set that contains all odd numbers', () => {
-    expect(any([1, 11, 29], isEven)).toEqual(false);
+    expect(some([1, 11, 29], isEven)).toBe(false);
   });
 
   it('should handle a set that contains an even number', () => {
-    expect(any([1, 10, 29], isEven)).toEqual(true);
+    expect(some([1, 10, 29], isEven)).toBe(true);
   });
 
   it('should not use the Array.prototype.reduce method', () => {
-    any([0, 10, 28], isEven);
-    expect(Array.prototype.reduce.calls.any()).toEqual(false);
+    some([0, 10, 28], isEven);
+    expect(Array.prototype.reduce.calls.some()).toBe(false);
     // use the reduce method you created in these exercises instead
   });
 });
