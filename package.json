@@ -1,14 +1,13 @@
 {
-  "name": "foundations-fullstack-test-first-part-2",
+  "name": "test-first-part-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "TestFirst JavaScript is a multi-part series that provides practice to intermediate to advanced javascript concepts. The majority of concepts introduced in TestFirst have mini lessons and practice exercises in the workshops on learndot. However, there will be new concepts introduced in TestFirst that you will need to learn on your own by reading documentation (it's important to begin learning how to read documentation efficiently!)",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "testem",
-    "grade": "node_modules/.bin/testem ci"
+    "test": "testem"
   },
   "repository": {
     "type": "git",
@@ -20,7 +19,8 @@
     "url": "https://github.com/FullstackAcademy/FullstackTestFirst-Part2/issues"
   },
   "homepage": "https://github.com/FullstackAcademy/FullstackTestFirst-Part2#readme",
-  "dependencies": {
-    "testem": "^1.6.0"
+  "dependencies": {},
+  "devDependencies": {
+    "testem": "^1.18.5"
   }
 }
