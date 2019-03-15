@@ -128,9 +128,7 @@ describe('once', () => {
     const funcReturned = once(isItFriday);
 
     expect(funcReturned()).toBe('TODAY IS FRIDAY!! TGIF!!!');
-    expect(funcReturned()).toBe(
-      'the function has already been called...'
-    );
+    expect(funcReturned()).toBe('the function has already been called...');
   });
   it('should only increment num one time', () => {
     let num = 50;
@@ -171,7 +169,7 @@ describe('shared contexts', () => {
     // besides four methods on the sharedObj.  The value that is
     // incremented/decremented (and returned by getValue)
     // should only be in scope during the createObjectWithClosures function call and then
-    // closed over by the four functions returned in the object
+    // closed over by the four methods returned in the object
     expect(Object.keys(sharedObj).length).toBe(4);
   });
 
@@ -214,7 +212,7 @@ describe("Don't Spill The Beans", () => {
     // checks for values in the array Object.keys returns, these are the property names on "secret" object.
     expect(
       properties.indexOf('getSecret') >= 0 &&
-      properties.indexOf('setSecret') >= 0
+        properties.indexOf('setSecret') >= 0
     ).toEqual(true);
     expect(properties.length === 2).toEqual(true);
   });
