@@ -14,4 +14,12 @@ The `class` exercises in TestFirst will challenge you in creating a Parent/Child
 - add a `constructor` method to a class
 - use the `super()` function in a `constructor` method of a Subclass
 
-It is important to have an understanding of the prototype chain before completing these exercises.
+#### 02 - Macbook
+
+This is another `class` based exercise, make sure to read the README.md for the problem.
+
+
+
+
+
+**Note:** It is important to have an understanding of the prototype chain before completing these exercises.
