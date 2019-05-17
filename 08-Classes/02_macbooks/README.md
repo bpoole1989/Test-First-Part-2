@@ -4,4 +4,4 @@ Laptops come in all different shapes, sizes, brands, names, etc! The initial tas
 
 After the Laptop class is created, extend the Laptop class and create a Macbook Class that has all of the characteristics of a Laptop including the main Laptop methods. In addition to having the same characteristics of the Laptop Class, the Macbook Class will have specific properties of its own.
 
-** Note: Class syntax should be used**
+**Note: Class syntax should be used**
