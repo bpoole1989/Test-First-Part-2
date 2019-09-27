@@ -10,3 +10,43 @@ TestFirst JavaScript is a multi-part series that provides practice to intermedia
   - 00-refactor-RPN-Calculator
   - 01-classes
   - 02-macbooks
+
+### Before beginning your assignment, make sure you have completed these steps: 
+
+1. Forked & cloned the TestFirst repository.
+2. Installed node and a text editor.
+
+
+### Setup Test First
+
+- **[Fork the repository to your personal GitHub Account](https://github.com/fullstackacademy/TestFirst-Part-1/)**
+- Clone the repository to your local machine
+- Install `testem` with the `npm install` command
+- Run `testem` with the `npm test` command.
+
+
+### Run Testem with npm test
+
+In your TestFirst directory run the command:
+
+```sh
+$ npm install
+```
+
+After the installation is completed, run the command:
+
+```sh
+$ npm test
+```
+
+The `npm test` command will run the local installation of `testem`! If you installed `testem` locally with this approach, instead of running `testem` run `npm test` whenever you want to launch `testem`. In addition, whenever clone a new TestFirst repository to your local machine (such as TestFirst-Part-2 or Checkpoints), you need to run `npm install` first, afterwards you can run `npm test`.
+
+Here is a [video demonstrating](https://youtu.be/KdMu351vFKw) the `npm test` command.
+
+
+
+<hr>
+<br>
+
+
+
